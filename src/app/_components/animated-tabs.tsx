@@ -14,7 +14,7 @@ export function AnimatedTabs({
   activeTab?: string;
 }) {
   return (
-    <div className="flex space-x-1 rounded-full bg-gray-950 p-1 border border-gray-800">
+    <div className="flex space-x-1 rounded-full bg-gray-950 p-1 border border-gray-800 font-mono">
       {tabs.map((tab) => (
         <a
           href={`#${tab.id}`}

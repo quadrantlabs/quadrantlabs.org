@@ -61,6 +61,14 @@ export default {
       primary: orange,
       secondary: brown,
     },
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        mono: ["var(--font-mono)"],
+      },
+    },
   },
   plugins: [],
 } satisfies Config;

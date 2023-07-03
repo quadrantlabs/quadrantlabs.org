@@ -1,7 +1,11 @@
+import { CSSProperties } from "react";
+import Background from "./_components/background";
+import { Navbar } from "./_components/navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const sansFont = Inter({ subsets: ["latin"] });
+const monoFont = JetBrains_Mono({ subsets: ["latin"]})
 
 export const metadata = {
   title: "Create Next App",
@@ -14,9 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-gray-900 text-white antialiased">
-      <body className={inter.className}>
-        <main>{children}</main>
+    <html lang="en" className="bg-gray-900 text-white antialiased" style={{
+      "--font-mono": monoFont.style.fontFamily
+    } as CSSProperties}>
+      <body className={sansFont.className}>
+        <Navbar />
+        <Background>
+          <main className="relative">{children}</main>
+        </Background>
       </body>
     </html>
   );
