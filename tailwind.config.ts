@@ -1,4 +1,5 @@
 import { type Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 // https://github.com/chakra-ui/ark/blob/main/website/panda.config.ts#L85
 const gray = {
@@ -68,7 +69,26 @@ export default {
       fontFamily: {
         mono: ["var(--font-mono)"],
       },
+      animation: {
+        loop: "loop var(--duration, 10s) linear infinite",
+      },
+      keyframes: {
+        loop: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities, theme }) {
+      addUtilities({
+        ".desktop-container": {
+          marginInline: "auto",
+          width: "100%",
+          maxWidth: theme("screens.lg"),
+        },
+      });
+    }),
+  ],
 } satisfies Config;
