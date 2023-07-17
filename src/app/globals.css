@@ -7,6 +7,6 @@
 }
 
 html {
-  @apply scroll-smooth;
+  @apply scroll-smooth selection:bg-primary-800/75 selection:text-primary-100 selection:backdrop-blur-sm;
   color-scheme: dark;
 }

@@ -41,7 +41,12 @@ export default function Background({
             top: useMotionTemplate`${mouseY}px`,
           }}
         />
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          className="absolute inset-0 z-[-1] h-full w-full [--background:theme(colors.gray.950)]"
+        >
           <defs>
             <pattern
               id="dotted-pattern"
@@ -59,7 +64,7 @@ export default function Background({
           <rect
             width="100%"
             height="100%"
-            fill="hsl(var(--background))"
+            fill="var(--background)"
             mask="url(#dots-mask)"
           />
         </svg>
