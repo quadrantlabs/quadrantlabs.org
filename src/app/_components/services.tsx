@@ -29,7 +29,7 @@ function IconsWrapper({ icons, marquee = false }: IconsWrapperProps) {
   }
 
   return (
-    <div className="mt-auto flex items-center -space-x-4 px-8 pb-8 pt-4 group-hover/spotlight:space-x-2">
+    <div className="relative mt-auto flex items-center -space-x-4 px-8 pb-8 pt-4 group-hover/spotlight:space-x-2">
       {content}
     </div>
   );
