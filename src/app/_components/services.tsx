@@ -67,7 +67,7 @@ function ServiceCard({
 
 export function Services() {
   return (
-    <section id="services" className="px-4 py-28">
+    <section id="services" className="px-4 pb-16 pt-36">
       <div className="desktop-container">
         <h2 className="font-mono text-6xl font-semibold text-white">
           Services
