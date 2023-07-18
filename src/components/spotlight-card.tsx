@@ -1,9 +1,16 @@
 "use client";
 
+import clsx from "clsx";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { MouseEvent } from "react";
 
-export function SpotlightCard({ children }: { children: React.ReactNode }) {
+export function SpotlightCard({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
@@ -16,7 +23,10 @@ export function SpotlightCard({ children }: { children: React.ReactNode }) {
 
   return (
     <div
-      className="group/spotlight relative h-full w-full rounded-xl border border-white/10 bg-gray-900/75"
+      className={clsx(
+        "group/spotlight relative h-full w-full rounded-xl border border-white/10 bg-gray-900/75",
+        className
+      )}
       onMouseMove={handleMouseMove}
     >
       <motion.div

@@ -14,13 +14,11 @@ export function Marquee({
       className={clsx("relative flex max-w-full overflow-hidden", className)}
     >
       <div
-        className="flex w-max animate-loop items-stretch gap-[--gap] [--gap:theme(spacing.2)] [animation-play-state:--animation-play-state] hover:[--animation-play-state:paused]"
+        className="flex w-max animate-loop items-stretch gap-[--gap] [--gap:theme(spacing.2)] [animation-delay:--animation-delay] [animation-play-state:--animation-play-state] hover:[--animation-play-state:paused]"
         style={{
           ["--duration" as any]: duration ? `${duration}ms` : undefined,
         }}
       >
-        {children}
-        {children}
         {children}
         {children}
       </div>

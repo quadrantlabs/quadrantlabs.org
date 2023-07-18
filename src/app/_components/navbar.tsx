@@ -6,7 +6,7 @@ import { useScrollspy } from "~/hooks/use-scrollspy";
 
 const TABS = [
   { id: "section-a", label: "Home" },
-  { id: "section-b", label: "Services" },
+  { id: "services", label: "Services" },
   { id: "section-c", label: "Methodology" },
   { id: "section-d", label: "Who we are" },
   { id: "section-e", label: "Contact" },
