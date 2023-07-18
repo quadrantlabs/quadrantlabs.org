@@ -1,15 +1,10 @@
+import { Hero } from "./_components/hero";
 import { Services } from "./_components/services";
 
 export default function Home() {
   return (
     <>
-      <section id="section-a" className="h-[calc(100vh+3rem)]">
-        <div className="mx-auto max-w-6xl px-4 py-20">
-          <div className="text-center font-mono text-5xl font-bold text-white">
-            Quadrant Labs
-          </div>
-        </div>
-      </section>
+      <Hero />
       <Services />
       <section
         id="section-c"
