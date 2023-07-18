@@ -481,7 +481,8 @@ export const services = {
   },
   mentoring: {
     title: "mentoring",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "We'll help you build your project, while enhancing your skills.",
     icons: [],
   },
 } satisfies Record<string, Service>;

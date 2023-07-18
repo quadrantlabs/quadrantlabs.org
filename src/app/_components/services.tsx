@@ -68,50 +68,61 @@ function ServiceCard({
 export function Services() {
   return (
     <section id="services" className="px-4 py-28">
-      <div className="grid grid-cols-1 gap-4 desktop-container md:grid-cols-3">
-        <ServiceCard
-          service={services.frontend}
-          className="[--duration:22s] md:col-span-2"
-        />
-        <ServiceCard
-          service={services.backend}
-          className="[--animation-delay:-0.5s] [--duration:15s]"
-        />
-        <ServiceCard service={services.uiux} />
-        <ServiceCard
-          service={{
-            title: (
-              <>
-                <span className="text-6xl">{Object.keys(services).length}</span>
-                <br />
-                services
-              </>
-            ),
-            description: "One price to rule them all.",
-          }}
-          className="row-span-2"
-        >
-          <div className="mt-auto p-8 pt-4 ">
-            <h3 className="mb-2 inline-flex items-start font-mono text-6xl font-semibold text-primary-400 transition-colors group-hover/spotlight:text-white">
-              €50/h<span className="text-xl">*</span>
-            </h3>
-            <p className="text-base text-gray-400">Depends on X and Y</p>
-          </div>
-        </ServiceCard>
-        <ServiceCard service={services.devops} />
-        <ServiceCard service={services.crossPlatform} />
-        <ServiceCard service={services.consultancy} />
-        <ServiceCard service={services.mentoring} />
-        <SpotlightCard className="md:col-span-2">
-          <div className="p-8">
-            <h3 className="mb-2 font-mono text-4xl font-semibold text-white transition-colors group-hover/spotlight:text-primary-400">
-              what about ...?
-            </h3>
-            <p className="text-base text-gray-400">
-              Reach out and we{"'"}ll see what we can do!
-            </p>
-          </div>
-        </SpotlightCard>
+      <div className="desktop-container">
+        <h2 className="font-mono text-6xl font-semibold text-white">
+          Services
+        </h2>
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <ServiceCard
+            service={services.frontend}
+            className="[--duration:22s] md:col-span-2"
+          />
+          <ServiceCard
+            service={services.backend}
+            className="[--animation-delay:-0.5s] [--duration:15s]"
+          />
+          <ServiceCard service={services.uiux} />
+          <ServiceCard
+            service={{
+              title: (
+                <>
+                  <span className="text-6xl">
+                    {Object.keys(services).length}
+                  </span>
+                  <br />
+                  services
+                </>
+              ),
+              description: "One price to rule them all.",
+            }}
+            className="row-span-2"
+          >
+            <div className="mt-auto p-8 pt-4 ">
+              <p className="mb-2 text-sm text-gray-400 [text-wrap:balance]">
+                May vary depending on your currency and situation.
+              </p>
+              <div className="flex items-center justify-center rounded-lg border-[3px] border-primary-400 bg-primary-400/10 px-4 py-6 transition-colors group-hover/spotlight:border-white group-hover/spotlight:bg-white/10">
+                <h3 className="inline-flex items-start font-mono text-6xl font-semibold text-primary-400 transition-colors group-hover/spotlight:text-white">
+                  €50/h<span className="text-xl">*</span>
+                </h3>
+              </div>
+            </div>
+          </ServiceCard>
+          <ServiceCard service={services.devops} />
+          <ServiceCard service={services.crossPlatform} />
+          <ServiceCard service={services.consultancy} />
+          <ServiceCard service={services.mentoring} />
+          <SpotlightCard className="md:col-span-2">
+            <div className="p-8">
+              <h3 className="mb-2 font-mono text-4xl font-semibold text-white transition-colors group-hover/spotlight:text-primary-400">
+                what about ...?
+              </h3>
+              <p className="text-base text-gray-400">
+                Reach out and we{"'"}ll see what we can do!
+              </p>
+            </div>
+          </SpotlightCard>
+        </div>
       </div>
     </section>
   );
